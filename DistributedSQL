@@ -1,0 +1,21 @@
+The neeed for Distributed SQL in the industry to differentiate and innovate, the canonical example being the finance industry which is lagging behind most others.
+From yugabyteDB:
+Despite the rise of cloud infrastructures and cloud-native applications, many financial services
+firms still rely on legacy RDBMSs, like Oracle, SQL Server, and Db2, for their business-critical
+applications.
+
+These monolithic databases were not designed for the world that financial services firms now
+inhabit—one of cloud computing and geo-distributed applications. In fact, these databases
+were built long before the first cloud architecture was doodled on a napkin.
+Monoliths handle increasing demand for data volumes and processing performance by adding
+capacity. That is not as quick and easy as it sounds. If demand falls, it is just as difficult to scale
+them down. The only way to safeguard against the total collapse of the single host machine is
+to run a second, standby, machine and keep its data synchronized with the primary machine
+through replication. 
+
+However, unless performance is unacceptably compromised, replication
+can only be asynchronous, resulting in additional complications.
+This does not work when trying to run geo-distributed microservices with the millisecond
+responses that customers demand. The database needs to be agile, horizontally scalable,
+and continuously available. It needs to have been built for the cloud, not retrofitted for it. The
+database needs to be distributed SQL.
