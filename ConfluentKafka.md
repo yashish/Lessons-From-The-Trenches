@@ -37,16 +37,20 @@ Team Echo is interested in creating a ride history for users by grouping locatio
 The team can easily write a ksqlDB query to process these data points and generate a rides stream. This stream can help the team offer promotions or launch new services for their users.
 ---------------------------------------------------
 
-Message<T Key, T Value>
+Kafka messages in .NET - Message<T Key, T Value>
 
 Key is often string and can be some Id like UserId, OrderId etc. The data type of the key becomes important when you want to consider how you want to distribute your messages in order and impacts ordering guarantees in a cluster 
 
 ```
 var message = new Message<String, Value>{
 Key = biometrics.DeviceId,
-Value = biometrics // serialized as JSON/Avro/Protobuf. This object could be a domain entity or an event that downstream systems would be interested in
+Value = biometrics, // serialized as JSON/Avro/Protobuf. This object could be a domain entity/event that downstream systems would be interested in
+//Optional
+Headers = headers, //used to define the serializer used
+Timestamp = new Timestamp(DateTime.UtcNow)
 };
 
 ```
-
+Be careful of using the metadata Headers and Timestamp - for instance overwriting Timestamp (populated by default) if needed by downstream systems.
+Instead put them in the Value
 
