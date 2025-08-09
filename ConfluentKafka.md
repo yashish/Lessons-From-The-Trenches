@@ -41,9 +41,12 @@ Message<T Key, T Value>
 
 Key is often string and can be some Id like UserId, OrderId etc. The data type of the key becomes important when you want to consider how you want to distribute your messages in order and impacts ordering guarantees in a cluster 
 
-```var message = new Message<String, Value>{
+```
+var message = new Message<String, Value>{
 Key = biometrics.DeviceId,
 Value = biometrics // serialized as JSON/Avro/Protobuf. This object could be a domain entity or an event that downstream systems would be interested in
-};```
+};
+
+```
 
 
