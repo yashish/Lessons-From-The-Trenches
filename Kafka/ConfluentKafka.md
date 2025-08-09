@@ -1,3 +1,5 @@
+Uber Mock up
+
 1) Team Alpha uses a MySQL database to store each rider's information. The database holds information such as rider's name, contact number, payment method, and more. 
 Team Alpha can easily connect their database with Confluent Cloud by leveraging a fully-managed connector. 
 The connector captures ongoing changes in the database and instantly replicate them to Confluent Cloud.
@@ -51,6 +53,6 @@ Timestamp = new Timestamp(DateTime.UtcNow)
 };
 
 ```
-Be careful of using the metadata Headers and Timestamp - for instance overwriting Timestamp (populated by default) if needed by downstream systems.
-Instead put them in the Value
+Be careful of using the metadata Headers and Timestamp - for instance overwriting Timestamp like here (otherwise populated by default) if needed by downstream systems.
+Instead put them in the Value as part of the message
 
