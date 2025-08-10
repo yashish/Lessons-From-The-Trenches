@@ -52,6 +52,8 @@ kube-public       Active       11h
 kube-system       Active       11h
 
 Pods:
+<img width="816" height="379" alt="image" src="https://github.com/user-attachments/assets/44437133-014e-4d27-8d07-e880e7c211de" />
+
 A Pod is the unit of deployment in Kubernetes, which represents a single instance of the application. A Pod is a logical collection of one or more containers, enclosing and isolating them to ensure that they:
 
 * Are scheduled together on the same host with the Pod.
@@ -76,5 +78,6 @@ spec:
 The above definition manifest, if stored by a def-pod.yaml file, is loaded into the cluster to run the desired Pod and its associated container image. Use 'create' or 'apply' (advanced Kubernetes practitioners) to run the pod
 
 $ kubectl create -f def-pod.yaml
+
 
 $ kubectl apply -f def-pod.yaml
