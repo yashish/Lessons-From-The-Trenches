@@ -6,6 +6,7 @@ This can be used in any cloud platform unlike the Task Definitions yaml in ECS f
 Without rewriting the entire config file, you can also swap cloud-provider specific settings in this file.
 Standardized way of deploying resources
 
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -21,6 +22,7 @@ ports:
 	  targetPort: 8080
 type: LoadBalancer
 ...
+```
 
 ------------------
 
@@ -62,6 +64,7 @@ A Pod is the unit of deployment in Kubernetes, which represents a single instanc
 
 Pods are ephemeral in nature and cannot self heal. Stand-alone Pod object YAML below.
 
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -74,10 +77,11 @@ spec:
     image: nginx:1.22.1
     ports:
     - containerPort: 80
-
+```
 The above definition manifest, if stored by a def-pod.yaml file, is loaded into the cluster to run the desired Pod and its associated container image. Use 'create' or 'apply' (advanced Kubernetes practitioners) to run the pod
 
 $ kubectl create -f def-pod.yaml
 
 
 $ kubectl apply -f def-pod.yaml
+
