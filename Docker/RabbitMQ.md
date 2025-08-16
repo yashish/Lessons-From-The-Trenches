@@ -40,3 +40,11 @@ You can use Docker Compose to run RabbitMQ easily. This is useful for managing m
 		```
 
 3. Access the RabbitMQ Management UI at [http://localhost:15672](http://localhost:15672) (default username/password: guest/guest).
+
+Running the docker compose command in detached mode
+<img width="1729" height="482" alt="image" src="https://github.com/user-attachments/assets/30b1619f-c5d8-460c-b067-225055605342" />
+
+<img width="1261" height="670" alt="image" src="https://github.com/user-attachments/assets/036f88c7-f9b4-4052-8c6c-bdcfe032b15f" />
+
+
+
