@@ -19,7 +19,7 @@ You can use Docker Compose to run RabbitMQ easily. This is useful for managing m
 
 1. Create a `docker-compose.yml` file (already provided in this directory):
 
-		```yaml
+		```
 		version: '3.8'
 		services:
 			rabbitmq:
@@ -35,7 +35,7 @@ You can use Docker Compose to run RabbitMQ easily. This is useful for managing m
 
 2. In the same directory, run:
 
-		```cmd
+		```
 		docker compose up -d
 		```
 
