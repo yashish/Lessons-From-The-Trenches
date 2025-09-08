@@ -1,2 +1,2 @@
 # Lessons-From-The-Trenches
-Collection of technical gems on modern cloud architecture and distributed applications
+Collection of my technical musings on modern cloud architecture and distributed applications
