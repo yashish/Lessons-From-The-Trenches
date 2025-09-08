@@ -1,7 +1,7 @@
 ---
 # Semantic Kernel: Multi-Agent Systems
 
-> Semantic Kernel can be used to develop multi-agent systems, but the way it does it is different from LangGraph or frameworks built with “agents” as a first-class concept.
+Semantic Kernel can be used to develop multi-agent systems, but the way it does it is different from LangGraph or frameworks built with “agents” as a first-class concept.
 
 ---
 
@@ -49,30 +49,33 @@ Each skill in SK behaves like an agent, and the Planner coordinates them.
 Semantic Kernel can definitely support multi-agent patterns, but it’s plugin/skill + planner driven, whereas frameworks like LangGraph provides a more explicit, graph-based agent orchestration model with native support for cycles, streaming, and multi-agent state.
 
 🔹 Architecture Comparison: Semantic Kernel vs. LangGraph (Multi-Agent)
+```
 Semantic Kernel (plugin + planner model)        LangGraph (graph + state model)
 -----------------------------------------------------------------------------------
 [User Request]                                 [User Request]
-     |                                               |
-     v                                               v
+    |                                               |
+    v                                               v
   [Planner] -----------------------------+     [StateGraph Controller]
-     |                                    |           |
-     v                                    |           v
+    |                                    |           |
+    v                                    |           v
 [MarketDataSkill] (Agent 1)               |    ┌─────────────────────────┐
-     |                                    |    |  MarketData Node (Agent1)|
-     v                                    |    └─────────────┬───────────┘
+    |                                    |    |  MarketData Node (Agent1)|
+    v                                    |    └─────────────┬───────────┘
 [RiskAnalysisSkill] (Agent 2)             |                  |
-     |                                    |                  v
-     v                                    |    ┌─────────────────────────┐
+    |                                    |                  v
+    v                                    |    ┌─────────────────────────┐
 [ReportingSkill] (Agent 3)                +--->| RiskAnalysis Node (Agent2)|
-     |                                         └─────────────┬───────────┘
-     v                                                       |
+    |                                         └─────────────┬───────────┘
+    v                                                       |
   [Final Report Output]                                       v
-                                                        ┌─────────────────────────┐
-                                                        | Reporting Node (Agent3) |
-                                                        └─────────────┬───────────┘
-                                                                      |
-                                                                      v
-                                                               [Final Report Output]
+                                             ┌─────────────────────────┐
+                                             | Reporting Node (Agent3) |
+                                             └─────────────┬───────────┘
+                                                        |
+                                                        v
+                                                   [Final Report Output]
+```
+
 
 
 Semantic Kernel: Planner auto-determines sequence of skills (agents).
