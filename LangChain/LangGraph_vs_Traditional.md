@@ -3,23 +3,24 @@
 
 ## 1. Traditional Software Methods/Functions (Deterministic)
 
-- You write a function → it executes the same way every time.
-- Good for:
+You write a function → it executes the same way every time.
+- **Good for:**
 	- API calls
 	- Data processing
 	- Workflows with strict rules
 
 ## 2. AI/Multi-Agent Workflows (Probabilistic)
 
-- An LLM response can vary run to run.
-- State needs to be tracked:
-	- Memory of conversation
-	- Task progress
-	- Errors
-	- Retries
-- Agents may hand off control to other agents dynamically (not pre-coded).
+Unlike traditional functions, an LLM’s response can change each run.
 
-> You need something more flexible than just “call function A then function B.”
+- **Requires explicit state tracking:**
+    - Conversation memory
+    - Task progress
+    - Error handling
+    - Retry logic
+- Agents can dynamically hand off control to other agents (not just fixed sequences).
+
+> You need a more flexible approach than simply “call function A, then function B.”
 
 ---
 
