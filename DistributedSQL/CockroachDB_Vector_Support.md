@@ -1,7 +1,9 @@
 CockroahDB supports Vector column as a data type alongside the structured data columns in a table. You can perform ANN (Approximate Nearest Neighbor) vector searches
 using C-SPANN algorithm with vector indexes built on cosine (angle) and Euclidean distance similarity in a high-dimensional graph for semantic seraches - not just traditional text searches.
+The vector column being alongside the traditional structured data columns ensure strong consistency and ACID compliance.
 
 <-> L2/Euclidean
+
 <=> Cosine
 
 ```sql
